@@ -1,0 +1,22 @@
+ALGORITHM sentence
+VAR
+    str:STRING;
+    i:INTEGER;
+    count-of-words:INTEGER=1;
+    count-of-ch:INTEGER;
+    count-of-vol:INTEGER;
+BEGIN
+    WHILE (str[i]<>".") DO
+        i++;
+        count-of-ch:=i;
+        IF(str[i]=" ")THEN
+        count-of-words:=count-of-words+1;
+        IF (str[i]="a" OR str[i]="e" OR str[i]="i" OR str[i]="o" OR str[i]="u" OR str[i]="A" OR str[i]="E" OR str[i]="I" OR str[i]="O" OR str[i]="U") THEN
+            count-of-vol+:=1
+        END_IF
+
+    END_WHILE
+    WRITE("count of words",count-of-words)
+    WRITE("count of ch",count-of-ch)
+    WRITE("count of vol",count-of-vol)
+END
